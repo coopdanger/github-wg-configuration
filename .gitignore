@@ -13,3 +13,5 @@ venv/
 issues.json
 pulls.json
 report.xml
+lib
+draft-cooper-wugh-github-wg-configuration.xml
