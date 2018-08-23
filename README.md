@@ -1,6 +1,6 @@
-# Gi hub Configura ion for IETF Working Groups
+# Github Configuration for IETF Working Groups
 
-This is the working area for the individual Internet-Draft, "Gi hub Configura ion for IETF Working Groups".
+This is the working area for the individual Internet-Draft, "Github Configuration for IETF Working Groups".
 
 * [Editor's Copy](https://coopdanger.github.io/github-wg-configuration/#go.draft-cooper-wugh-github-wg-configuration.html)
 * [Individual Draft](https://tools.ietf.org/html/draft-cooper-wugh-github-wg-configuration)
