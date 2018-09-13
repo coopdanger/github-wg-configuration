@@ -70,13 +70,27 @@ When an area director or working group chair makes a request to create a Github 
 
 Once the organization is created, the URL for the organization would be added to the working group's page in the datatracker.
 
+Steps 3 and 4 above imply that the Github identities of the organization owners and administrators are known. Recording Github identities in the datatracker (see https://trac.tools.ietf.org/tools/ietfdb/ticket/2548) would facilitate this. The person requesting the organization would need to be notified if the Github identities o any of the people meant to be owners or administrators were not available.
+
 ## Personnel changes
 
 When there are personnel changes in the area or the working group, those changes would be reflected in the Github organization.
 
 ## Working group closing
 
-When a working group is closed, the team with administrative access would be removed and the owner list would be returned to its initial composition. Repositories would be updated to indicate that they are no longer under development.
+When a working group is closed, the team with administrative access would be removed and the owner list would be returned to its initial composition. The organization summary and the repositories within the organization would be updated to indicate that they are no longer under development.
+
+## Creation of document repository
+
+There are many different scenarios and configurations where it might be useful to have automation and/or established administrative conventions for repositories within WG organizations:
+
+- Creating a new repository for an individual draft
+- Creating a new repository for an adopted working group draft
+- Migrating an existing document repository into the WG organization
+- Creating a new repository that contains multiple drafts
+- etc.
+
+As an incremental step, we propose initially that there be a facility in the datatracker interface to allow an administrator of an ietf-\<wgname>-wg organization to request the creation of a new repository within that organization for a single document. The document authors would be identified as collaborators. The repository name would be the draft name. Ideally, the repository would be configured with an empty/skeletal draft file, default CONTRIBUTING, LICENSE, and README files, and continuous integration support, in the vein of https://github.com/martinthomson/i-d-template. 
 
 # Working group process
 
@@ -90,7 +104,7 @@ At a minimum, every repository created in a working group organization would inc
 
 [TBD. Would like to propose a standard way of doing both of these things, but really not sure what to suggest. Best I can come up with now:
 
-For back-up: If we could identify a server endpoint on ietf.org, would be nice if we could automatically back up all repos in orgs that get created via the datattracker using the mechanism described above.
+For back-up: If we could identify a server endpoint on ietf.org, would be nice if we could automatically back up all repos in orgs that get created via the datatracker using the mechanism described above.
 
 For archival: Is the dummy-account-send-to-a-separate-mailing-list the best we have on this right now?]
 

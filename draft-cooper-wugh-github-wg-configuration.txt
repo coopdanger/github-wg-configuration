@@ -4,8 +4,8 @@
 
 wugh                                                          P. Hoffman
 Internet-Draft                                                     ICANN
-Intended status: Informational                           August 23, 2018
-Expires: February 24, 2019
+Intended status: Informational                        September 13, 2018
+Expires: March 17, 2019
 
 
               Github Configuration for IETF Working Groups
@@ -30,7 +30,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on February 24, 2019.
+   This Internet-Draft will expire on March 17, 2019.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Hoffman                 Expires February 24, 2019               [Page 1]
+Hoffman                  Expires March 17, 2019                 [Page 1]
 
-Internet-Draft            Github Configuration               August 2018
+Internet-Draft            Github Configuration            September 2018
 
 
 Table of Contents
@@ -65,15 +65,16 @@ Table of Contents
      2.1.  Creation of Github organization . . . . . . . . . . . . .   3
      2.2.  Personnel changes . . . . . . . . . . . . . . . . . . . .   4
      2.3.  Working group closing . . . . . . . . . . . . . . . . . .   4
+     2.4.  Creation of document repository . . . . . . . . . . . . .   4
    3.  Working group process . . . . . . . . . . . . . . . . . . . .   4
-     3.1.  Contributions . . . . . . . . . . . . . . . . . . . . . .   4
-     3.2.  Back-up and archival  . . . . . . . . . . . . . . . . . .   4
-   4.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
+     3.1.  Contributions . . . . . . . . . . . . . . . . . . . . . .   5
+     3.2.  Back-up and archival  . . . . . . . . . . . . . . . . . .   5
+   4.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
    5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
      6.1.  Informative References  . . . . . . . . . . . . . . . . .   5
      6.2.  URIs  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
@@ -108,10 +109,9 @@ Table of Contents
 
 
 
-
-Hoffman                 Expires February 24, 2019               [Page 2]
+Hoffman                  Expires March 17, 2019                 [Page 2]
 
-Internet-Draft            Github Configuration               August 2018
+Internet-Draft            Github Configuration            September 2018
 
 
 2.  Administrative Process and Conventions
@@ -158,17 +158,21 @@ Internet-Draft            Github Configuration               August 2018
    Once the organization is created, the URL for the organization would
    be added to the working group's page in the datatracker.
 
+   Steps 3 and 4 above imply that the Github identities of the
+   organization owners and administrators are known.  Recording Github
+   identities in the datatracker (see
+   https://trac.tools.ietf.org/tools/ietfdb/ticket/2548) would
 
 
 
-
-
-
-
-Hoffman                 Expires February 24, 2019               [Page 3]
+Hoffman                  Expires March 17, 2019                 [Page 3]
 
-Internet-Draft            Github Configuration               August 2018
+Internet-Draft            Github Configuration            September 2018
 
+
+   facilitate this.  The person requesting the organization would need
+   to be notified if the Github identities o any of the people meant to
+   be owners or administrators were not available.
 
 2.2.  Personnel changes
 
@@ -179,14 +183,49 @@ Internet-Draft            Github Configuration               August 2018
 
    When a working group is closed, the team with administrative access
    would be removed and the owner list would be returned to its initial
-   composition.  Repositories would be updated to indicate that they are
-   no longer under development.
+   composition.  The organization summary and the repositories within
+   the organization would be updated to indicate that they are no longer
+   under development.
+
+2.4.  Creation of document repository
+
+   There are many different scenarios and configurations where it might
+   be useful to have automation and/or established administrative
+   conventions for repositories within WG organizations:
+
+   o  Creating a new repository for an individual draft
+
+   o  Creating a new repository for an adopted working group draft
+
+   o  Migrating an existing document repository into the WG organization
+
+   o  Creating a new repository that contains multiple drafts
+
+   o  etc.
+
+   As an incremental step, we propose initially that there be a facility
+   in the datatracker interface to allow an administrator of an ietf-
+   <wgname>-wg organization to request the creation of a new repository
+   within that organization for a single document.  The document authors
+   would be identified as collaborators.  The repository name would be
+   the draft name.  Ideally, the repository would be configured with an
+   empty/skeletal draft file, default CONTRIBUTING, LICENSE, and README
+   files, and continuous integration support, in the vein of
+   https://github.com/martinthomson/i-d-template.
 
 3.  Working group process
 
    [I-D.thomson-github-bcp] contains discussion of the different
    possible ways that a working group can use Github and the large
    number of decisions associated with doing so.  This section proposes
+
+
+
+Hoffman                  Expires March 17, 2019                 [Page 4]
+
+Internet-Draft            Github Configuration            September 2018
+
+
    a minimal set of administrative policies for working groups to follow
    and the administrative support needed to carry out those policies.
 
@@ -207,7 +246,7 @@ Internet-Draft            Github Configuration               August 2018
 
    For back-up: If we could identify a server endpoint on ietf.org,
    would be nice if we could automatically back up all repos in orgs
-   that get created via the datattracker using the mechanism described
+   that get created via the datatracker using the mechanism described
    above.
 
    For archival: Is the dummy-account-send-to-a-separate-mailing-list
@@ -216,15 +255,6 @@ Internet-Draft            Github Configuration               August 2018
 4.  Security Considerations
 
    TODO
-
-
-
-
-
-Hoffman                 Expires February 24, 2019               [Page 4]
-
-Internet-Draft            Github Configuration               August 2018
-
 
 5.  IANA Considerations
 
@@ -243,6 +273,14 @@ Internet-Draft            Github Configuration               August 2018
 
    [1] https://trustee.ietf.org/license-for-open-source-
        repositories.html
+
+
+
+
+Hoffman                  Expires March 17, 2019                 [Page 5]
+
+Internet-Draft            Github Configuration            September 2018
+
 
 Author's Address
 
@@ -277,4 +315,22 @@ Author's Address
 
 
 
-Hoffman                 Expires February 24, 2019               [Page 5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hoffman                  Expires March 17, 2019                 [Page 6]
