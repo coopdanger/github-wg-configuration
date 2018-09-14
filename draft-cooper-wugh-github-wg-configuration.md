@@ -52,7 +52,7 @@ The document is meant to spur discussion in the IETF community. If there proves 
 
 # Administrative Process and Conventions
 
-This section specifies a proposal for an administrative process and conventions to support the creation and management of GitHub organizations for working groups in a uniform way. The steps could be done manually by the IETF Secretariat or they could be automated. For example, see &lt;https://github.com/richsalz/ietf-gh-scripts&gt; and &lt;https://github.com/martinthomson/i-d-template&gt; for working examples of automation that is in use in some working groups.
+This section specifies a proposal for an administrative process and conventions to support the creation and management of GitHub organizations for working groups and single-document repositories in a uniform way. The steps could be done manually by the IETF Secretariat or they could be automated. For example, see &lt;https://github.com/richsalz/ietf-gh-scripts&gt; and &lt;https://github.com/martinthomson/i-d-template&gt; for working examples of automation that is in use in some working groups.
 
 In this document the question of whether processes should be manual or automated is deliberately left ambiguous since the first question that should be asked is whether this is functionality the community would want to have supported at all.
 
