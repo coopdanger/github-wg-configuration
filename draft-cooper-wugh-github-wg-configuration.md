@@ -78,7 +78,7 @@ Steps 3 and 4 above imply that the GitHub identities of the organization owners 
 
 ## Personnel Changes
 
-When there are personnel changes in the area or the working group, those changes would be reflected in the GitHub organization. \[\[ Can this be done automatically? \]\]
+When there are personnel changes in the area or the working group, those changes would be reflected in the GitHub organization. \[\[ Need to do a bit of research on how to do this automatically. \]\]
 
 ## Working Group Closing
 
