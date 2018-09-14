@@ -23,7 +23,7 @@ author:
     ins: P. Hoffman
     name: Paul Hoffman
     organization: ICANN
-    email: paul.hoffman@vpnc.org
+    email: paul.hoffman@icann.org
 
 normative:
   git-protocol:
