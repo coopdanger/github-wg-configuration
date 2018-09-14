@@ -1,7 +1,7 @@
 ---
 docname: draft-cooper-wugh-github-wg-configuration
-title: Github Configuration for IETF Working Groups
-abbrev: Github Configuration
+title: GitHub Configuration for IETF Working Groups
+abbrev: GitHub Configuration
 category: info
 
 ipr: trust200902
@@ -19,7 +19,6 @@ author:
     organization: Cisco
     email: alcoop@cisco.com
 
-author:
  -
     ins: P. Hoffman
     name: Paul Hoffman
@@ -27,99 +26,104 @@ author:
     email: paul.hoffman@vpnc.org
 
 normative:
+  git-protocol:
+    title: "Git on the Server - The Protocols"
+    target: "https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#The-Git-Protocol"
 
 informative:
 
 
 --- abstract
 
-TODO Abstract 
+The use of GitHub in IETF working group processes is increasing. This document describes possible uses and conventions for working groups which are considering starting to use GitHub. It does not mandate any processes, and does not intend to change the processes used by current working groups.
+
+Discussion of this document takes place on the ietf-and-github mailing list (ietf-and-github@ietf.org), which is archived at &lt;https://mailarchive.ietf.org/arch/search?email_list=ietf-and-github&gt;.
+
 
 --- middle
 
 # Introduction
 
-Many IETF working groups and participants are making use of Github in different ways as part of their work on IETF documents. Some others are interested in having their working groups use Github to facilitate the development of working group documents, but they are unfamiliar with how to get started or they are unclear about which conventions to follow. 
+Many IETF working groups and participants make use of GitHub in different ways as part of their work on IETF documents. Some others are interested in having their working groups use GitHub to facilitate the development of working group documents, but they are unfamiliar with how to get started or they are unclear about which conventions to follow. 
 
-This document proposes a set of administrative processes and conventions for IETF working groups to use if they chose as a working group to use Github to facilitate their work. The proposals in this document are not directed at working groups or individuals that are already using Github to do IETF work. Practices vary among existing working groups and some of them are not consistent with the conventions proposed here. That is fine. The goal of the proposals in this document is not to require uniformity in current practice, but to help working groups to get started using Github in a uniform way if they want to.
+This document proposes a set of administrative processes and conventions for IETF working groups to use if they chose as a working group to use GitHub to facilitate their work. The proposals in this document are not directed at working groups or individuals that are already using GitHub to do IETF work. Practices vary among existing working groups and some of them are not consistent with the conventions proposed here: that is fine. The goal of the proposals in this document is not to require uniformity in current practice, but to help working groups to get started using GitHub in a uniform way if they want to.
 
-The document is meant to spur discussion in the IETF community. If there proves to be rough consensus in the community in support of the proposals in this document, the functional requirements would need to be discussed with the IETF tools team and the secretariat who would need to support various pieces of what is proposed here.
-
-Discussion of this document takes place on the GitHub@ietf mailing list (ietf-and-github@ietf.org), which is archived at https://mailarchive.ietf.org/arch/search?email_list=ietf-and-github.
-
+The document is meant to spur discussion in the IETF community. If there proves to be rough consensus in the community in support of the proposals in this document, the functional requirements would need to be discussed with the IETF Tools Team, and the IETF Secretariat who would need to support various pieces of what is proposed here.
 
 # Administrative Process and Conventions
 
-This section specifies a proposal for an administrative process and conventions to support the creation and management of Github organizations for working groups in a uniform way. The steps could be done manually by the secretariat or they could be automated. See, e.g., https://github.com/richsalz/ietf-gh-scripts and https://github.com/martinthomson/i-d-template for work on automation. In this document the question of whether these processes would be manual or automated is deliberately left ambiguous since the first question is whether this is functionality the community would want to have supported at all.
+This section specifies a proposal for an administrative process and conventions to support the creation and management of GitHub organizations for working groups in a uniform way. The steps could be done manually by the IETF Secretariat or they could be automated. For example, see &lt;https://github.com/richsalz/ietf-gh-scripts&gt; and &lt;https://github.com/martinthomson/i-d-template&gt; for working examples of automation that is in use in some working groups.
+
+In this document the question of whether processes should be manual or automated is deliberately left ambiguous since the first question that should be asked is whether this is functionality the community would want to have supported at all.
 
 Most of the conventions below are drawn from {{?I-D.thomson-github-bcp}}.
 
-## Creation of Github organization
+## Creation of GitHub Organizations
 
-We propose that there be a facility in the datatracker interface to allow an area director or working group chair to request the creation of a Github organization for a particular working group. Ideally, this facility would appear both as part of the working group chartering UI as well as the working group page UI.
+This document proposes that there be a facility in the IETF Datatracker (&lt;https://datatracker.ietf.org/&gt;) interface to allow an area director or working group chair to request the creation of a GitHub organization for a particular working group. Ideally, this facility would appear both as part of the working group chartering UI as well as the working group page UI.
 
-When an area director or working group chair makes a request to create a Github organization, the following process would be initiated:
+When an area director or working group chair makes a request to create a GitHub organization, the following process would be initiated:
 
-1. Create a Github organization for the working group.
+1. Create a GitHub organization for the working group.
 
-2. Name the organization as follows: ietf-\<wgname>-wg
+2. Name the organization as ietf-&lt;wgname&gt;-wg
 
-3. Initialize the organization by designating the secretariat and the area directors in the working group's area as owners. If the responsible AD for the working group is from another area, that AD will be an owner as well. 
+3. Initialize the organization by designating the IETF Secretariat and the area directors in the working group's area as owners. If the responsible AD for the working group is from another area, that AD will be an owner as well. 
 
 4. Initialize the organization with a team that has administrator access. This team will consist of the working group chairs and working group secretary, if one exists.
 
-Once the organization is created, the URL for the organization would be added to the working group's page in the datatracker.
+After the organization is created, the URL for the organization would be added to the working group's page in the datatracker.
 
-Steps 3 and 4 above imply that the Github identities of the organization owners and administrators are known. Recording Github identities in the datatracker (see https://trac.tools.ietf.org/tools/ietfdb/ticket/2548) would facilitate this. The person requesting the organization would need to be notified if the Github identities o any of the people meant to be owners or administrators were not available.
+Steps 3 and 4 above imply that the GitHub identities of the organization owners and administrators are known. Recording GitHub identities in the datatracker (see &lt;https://trac.tools.ietf.org/tools/ietfdb/ticket/2548&gt;) would facilitate this. The person requesting the organization would need to be notified if the GitHub identities of any of the people meant to be owners or administrators were not available.
 
-## Personnel changes
+## Personnel Changes
 
-When there are personnel changes in the area or the working group, those changes would be reflected in the Github organization.
+When there are personnel changes in the area or the working group, those changes would be reflected in the GitHub organization. \[\[ Can this be done automatically? \]\]
 
-## Working group closing
+## Working Group Closing
 
 When a working group is closed, the team with administrative access would be removed and the owner list would be returned to its initial composition. The organization summary and the repositories within the organization would be updated to indicate that they are no longer under development.
 
-## Creation of document repository
+## Creation of Document Repository
 
-There are many different scenarios and configurations where it might be useful to have automation and/or established administrative conventions for repositories within WG organizations:
+There are many different scenarios and configurations where it might be useful to have automation and/or established administrative conventions for repositories within WG organizations, such as:
 
-- Creating a new repository for an individual draft
-- Creating a new repository for an adopted working group draft
-- Migrating an existing document repository into the WG organization
-- Creating a new repository that contains multiple drafts
-- etc.
+   - Creating a new repository for an individual draft
 
-As an incremental step, we propose initially that there be a facility in the datatracker interface to allow an administrator of an ietf-\<wgname>-wg organization to request the creation of a new repository within that organization for a single document. The document authors would be identified as collaborators. The repository name would be the draft name. Ideally, the repository would be configured with an empty/skeletal draft file, default CONTRIBUTING, LICENSE, and README files, and continuous integration support, in the vein of https://github.com/martinthomson/i-d-template. 
+   - Creating a new repository for an adopted working group draft
 
-# Working group process
+   - Migrating an existing document repository into the WG organization
 
-{{?I-D.thomson-github-bcp}} contains discussion of the different possible ways that a working group can use Github and the large number of decisions associated with doing so. This section proposes a minimal set of administrative policies for working groups to follow and the administrative support needed to carry out those policies.
+   - Creating a new repository that contains multiple drafts
+
+
+As an incremental step, this document proposes that there be a facility in the Datatracker interface to allow an administrator of an ietf-&lt;wgname&gt;-wg organization to request the creation of a new repository within that organization for a single document. The document authors would be identified as collaborators. The repository name would be the draft name. Ideally, the repository would be configured with an skeleton draft file, default CONTRIBUTING, LICENSE, and README files, and continuous integration support, in the vein of &lt;https://github.com/martinthomson/i-d-template&gt;. 
+
+# Working Group Process
+
+{{?I-D.thomson-github-bcp}} contains discussion of the different possible ways that a working group can use GitHub and the large number of decisions associated with doing so. This section proposes a basic set of administrative policies for working groups to follow and the administrative support needed to carry out those policies.
 
 ## Contributions
 
-At a minimum, every repository created in a working group organization would incorporate the [boilerplate text](https://trustee.ietf.org/license-for-open-source-repositories.html) from the IETF license file for open source repositories into its CONTRIBUTING file. The CONTRIBUTING file might contain other information as well (see https://github.com/ietf/repo-files/tree/master/contributing-samples for examples).
+At a minimum, every repository created in a working group organization needs to incorporate into its CONTRIBUTING file the boilerplate text at &lt;https://trustee.ietf.org/license-for-open-source-repositories.html&gt; from the IETF license file for open source repositories. The CONTRIBUTING file can contain other information as well (see &lt;https://github.com/ietf/repo-files/tree/master/contributing-samples&gt; for examples).
 
-## Back-up and archival {#archival}
+## Backing Up and Archiving GitHub Content
 
-[TBD. Would like to propose a standard way of doing both of these things, but really not sure what to suggest. Best I can come up with now:
+IETF working group mailing lists are automatically backed up by the IETF Secretariat, and the archives are publicly available. It would be good for working group GitHub content to also be backed up and publicly archived. This document proposes using the git protocol {{git-protocol}} itself for both of these tasks.
 
-For back-up: If we could identify a server endpoint on ietf.org, would be nice if we could automatically back up all repos in orgs that get created via the datatracker using the mechanism described above.
+Every IETF working group repository on GitHub will have a mirror repository of the same name on a server maintained by the IETF Secretariat. Every hour, a service will use the "git fetch" command on every GitHub repository that is being tracked. The mirror repository will allow anyone to read the repository.
 
-For archival: Is the dummy-account-send-to-a-separate-mailing-list the best we have on this right now?]
-
+Note that this system will not back up GitHub issues or pull requests. It is very likely that these should be backed up as well. The GitHub API possibly allows this; if so, the IETF Secretariat should bac up those at the same time as it is backing up the GitHub repositories.
   
 
 # Security Considerations
 
-TODO
+An attacker who can change the contents of Internet Drafts, particularly late in a working group's process, can possibly cause unnoticed changes in protocols that are eventually adopted.
 
 
 # IANA Considerations
 
 This document has no IANA actions.
-
-
 
 --- back
 
