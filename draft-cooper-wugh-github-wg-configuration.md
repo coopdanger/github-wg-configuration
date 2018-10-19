@@ -83,7 +83,7 @@ is functionality the community would want to have supported at all.
 
 Most of the conventions below are drawn from {{?I-D.thomson-github-bcp}}.
 
-## Creation of GitHub Organizations
+## Creation of GitHub Organizations {#creation}
 
 This document proposes that there be a facility in the IETF Datatracker
 (&lt;https://datatracker.ietf.org/&gt;) interface to allow an area director or working
@@ -114,11 +114,19 @@ administrators are known. Recording GitHub identities in the datatracker (see
 person requesting the organization would need to be notified if the GitHub identities of
 any of the people meant to be owners or administrators were not available.
 
+## Migration of an Existing Organization
+
+If a working group already has an organization, it would be usefulf to be able
+to make it has the same management as one would get with going through the
+steps in {{creation}}. That is, it would be good to be able to run steps 3 and
+4 from {{creation}} so that the rest of the activities in this section such as
+personnel work the same for the organizations that were created on their own.
+
 ## Personnel Changes
 
 When there are personnel changes in the area or the working group, those changes would be
 reflected in the GitHub organization. \[\[ Need to do a bit of research on how to do this
-automatically. \]\]
+through the API, if possible. \]\]
 
 ## Working Group Closing
 
@@ -133,7 +141,8 @@ There are many different scenarios and configurations where it might be useful t
 automation and/or established administrative conventions for repositories within WG
 organizations, such as:
 
-   - Creating a new repository for an individual draft
+   - Creating a new repository for an individual draft that is likely to become
+   a working group document
 
    - Creating a new repository for an adopted working group draft
 
@@ -166,6 +175,9 @@ license file for open source repositories. The CONTRIBUTING file can contain oth
 information as well (see
 &lt;https://github.com/ietf/repo-files/tree/master/contributing-samples&gt; for examples).
 
+It would be useful if the user data in the Datatracker could list (at a minimum) the
+GitHub account of the user so that their contributions could be tracked more easily.
+
 ## Backing Up and Archiving GitHub Content
 
 IETF working group mailing lists are automatically backed up by the IETF Secretariat, and
@@ -180,7 +192,7 @@ repository will allow anyone to read the repository.
 
 Note that this system will not back up GitHub issues or pull requests. It is very likely
 that these should be backed up as well. The GitHub API possibly allows this; if so, the
-IETF Secretariat should bac up those at the same time as it is backing up the GitHub
+IETF Secretariat should back up those at the same time as it is backing up the GitHub
 repositories.
   
 
