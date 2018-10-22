@@ -117,7 +117,7 @@ any of the people meant to be owners or administrators were not available.
 ## Migration of an Existing Organization
 
 If a working group already has an organization, it would be usefulf to be able
-to make it has the same management as one would get with going through the
+to make it have the same management as one would get with going through the
 steps in {{creation}}. That is, it would be good to be able to run steps 3 and
 4 from {{creation}} so that the rest of the activities in this section such as
 personnel work the same for the organizations that were created on their own.
