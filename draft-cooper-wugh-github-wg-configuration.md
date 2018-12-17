@@ -125,7 +125,9 @@ personnel work the same for the organizations that were created on their own.
 ## Personnel Changes
 
 When there are personnel changes in the area or the working group, those changes would be
-reflected in the GitHub organization. \[\[ Need to do a bit of research on how to do this
+reflected in the GitHub organization.
+There should likely be an API to specify that there were personnel changes.
+\[\[ Need to do a bit of research on how to do this
 through the API, if possible. \]\]
 
 ## Working Group Closing
@@ -141,10 +143,10 @@ There are many different scenarios and configurations where it might be useful t
 automation and/or established administrative conventions for repositories within WG
 organizations, such as:
 
-   - Creating a new repository for an individual draft that is likely to become
-   a working group document
+   - Creating a new repository for an individual draft that is at the discretion of the
+   WG chair
 
-   - Creating a new repository for an adopted working group draft
+   - Creating a new repository for an already-adopted working group draft
 
    - Migrating an existing document repository into the WG organization
 
@@ -181,7 +183,9 @@ GitHub account of the user so that their contributions could be tracked more eas
 ## Backing Up and Archiving GitHub Content
 
 IETF working group mailing lists are automatically backed up by the IETF Secretariat, and
-the archives are publicly available. It would be good for working group GitHub content to
+the archives are publicly available. All official interactions in a WG must be archived.
+
+It would be good for working group GitHub content to
 also be backed up and publicly archived. This document proposes using the git protocol
 {{git-protocol}} itself for both of these tasks.
 
@@ -194,7 +198,8 @@ Note that this system will not back up GitHub issues or pull requests. It is ver
 that these should be backed up as well. The GitHub API possibly allows this; if so, the
 IETF Secretariat should back up those at the same time as it is backing up the GitHub
 repositories.
-  
+
+{{?I-D.thomson-github-bcp}} has more discussion of backing up and archiving.
 
 # Security Considerations
 
